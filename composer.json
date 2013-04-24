@@ -1,0 +1,22 @@
+{
+	"name":"cunchu/cunchu",
+	"repositories": [
+		{  
+			"type":"git",
+			"url":"https://github.com/cameronjacobson/SimpleHttpClient.git"
+		},
+		{  
+			"type":"git",
+			"url":"https://github.com/cameronjacobson/SimpleJsonRPC2.git"
+		}
+	],
+	"require": {
+		"datashovel/simplehttpclient": "1.0.*@dev",
+		"simplejsonrpc2/simplejsonrpc2": "@dev"
+	},
+	"autoload": {
+		"psr-0": {
+			"Cunchu": "src/"
+		}
+	}
+}
