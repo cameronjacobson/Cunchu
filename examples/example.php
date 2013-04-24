@@ -26,8 +26,8 @@ try{
 	echo 'Getting values for key1,key2'.PHP_EOL;
 	var_dump($scalaris->get(array('key1','key2')));
 
-	// THIS WILL FAIL
-	echo 'This request will fail because key5 does not exist'.PHP_EOL;
+	// 'not_found' results will return NULL
+	echo 'This request will return NULL because key5 does not exist'.PHP_EOL;
 	var_dump($scalaris->get(array('key5')));
 
 }catch(CunchuException $e){

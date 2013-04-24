@@ -61,11 +61,17 @@ class Cunchu
 		$return = array();
 		foreach($results['result']['results'] as $key=>$result){
 			if($result['status'] !== 'ok'){
-				throw new CunchuException('part or all of the request failed');
+				switch($result['reason']){
+					case 'not_found':
+						break;
+					default:
+						throw new CunchuException('part or all of the request failed');
+						break;
+				}
 			}
 			switch($type){
 				case 'read':
-					$return[$this->keys[$key]] = $result['value']['value'];
+					$return[$this->keys[$key]] = @$result['value']['value'] ?: null;
 					break;
 				case 'write':
 				default:
