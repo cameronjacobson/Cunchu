@@ -11,6 +11,7 @@
 		}
 	],
 	"require": {
+		"ext-event": "*",
 		"datashovel/simplehttpclient": "1.0.*@dev",
 		"simplejsonrpc2/simplejsonrpc2": "@dev"
 	},
